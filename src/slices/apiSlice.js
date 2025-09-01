@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'https://hostel-hub-api.onrender.com',
+  baseUrl: import.meta.env.VITE_BACKEND_URL,
   // prepareHeaders is the function we need
   prepareHeaders: (headers, { getState }) => {
     const { userInfo } = getState().auth;
